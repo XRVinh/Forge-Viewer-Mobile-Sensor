@@ -2,7 +2,7 @@
 
 ## Description
 
-This harness mainly for test data from mobile sensors by JavaScripter-Autodesk/viewer-javascript-tutorial
+This harness mainly for test data from mobile sensors by JavaScripter
 
 ## Setup
 
