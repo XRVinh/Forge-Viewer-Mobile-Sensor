@@ -2,7 +2,7 @@
 
 ## Description
 
-This harness mainly for test data from mobile sensors by JavaScripter
+This harness is mainly for test data from mobile sensors by JavaScripter
 
 ## Setup
 
@@ -14,10 +14,13 @@ This harness mainly for test data from mobile sensors by JavaScripter
 
 * Modify scope per your test requirement.
 * Prepare a model by Forge web services, provide the model urn at  `TestMain.js`
+
    var defaultUrn = ' your urn ';
+   
 * Configure the port in `server.js` per your requirement.
 * deploy the app to your website, say http://mytest.com
 * replace socket root server with yours in MobileGyro.js and MobileSensors.js
+
    var socket = io( ' http://mytest.com ');
 
 ## Test
