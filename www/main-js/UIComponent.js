@@ -16,21 +16,35 @@ MyUIExtension.prototype.onToolbarCreated = function() {
 MyUIExtension.prototype.createUI = function() {
 
     var viewer = this.viewer;
-    // Button - Gyro
-    var button_Gyro = new Autodesk.Viewing.UI.Button('gyro-button');
-    button_Gyro.icon.style.fontSize = "24px";
-    button_Gyro.icon.className = 'glyphicon glyphicon-link';
+    
+    // Button - Gyro for moving object
+    var button_Gyro_for_Moving_Obj = new Autodesk.Viewing.UI.Button('btn-move-obj');
+    button_Gyro_for_Moving_Obj.icon.style.backgroundImage = 'url(images/move.png)';
 
-    this._isGyro = false;
-    button_Gyro.onClick = function(e) {
-        _gyroext.OnOrOff();
+
+     button_Gyro_for_Moving_Obj.onClick = function(e) {
+        _gyroext.Move_Obj_OnOrOff();
     };
-    //button_Gyro.addClass('gyro-button');
-    button_Gyro.setToolTip('Mobile Gyro');
+
+    button_Gyro_for_Moving_Obj.addClass('btn-move-obj');
+    button_Gyro_for_Moving_Obj.setToolTip('Mobile Gyro for Moving Object');
+
+    // Button - Gyro and Touch for driving camera
+    var button_Gyro_for_Driving_Camera = new Autodesk.Viewing.UI.Button('btn-driving-camera');
+     button_Gyro_for_Driving_Camera.icon.style.backgroundImage = 'url(images/compass.png)';
+
+     button_Gyro_for_Driving_Camera.onClick = function(e) {
+        _gyroext.Drive_Camera_OnOrOff();
+    };
+
+    button_Gyro_for_Driving_Camera.addClass('btn-driving-camera');
+    button_Gyro_for_Driving_Camera.setToolTip('Mobile Gyro for Driving Camera');
 
     // SubToolbar
     this.subToolbar = new Autodesk.Viewing.UI.ControlGroup('my-custom-buttons-toolbar');
-     this.subToolbar.addControl(button_Gyro);
+    this.subToolbar.addControl(button_Gyro_for_Moving_Obj);
+    this.subToolbar.addControl(button_Gyro_for_Driving_Camera);
+
 
     viewer.toolbar.addControl(this.subToolbar);
 };
