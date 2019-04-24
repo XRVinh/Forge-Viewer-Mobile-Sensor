@@ -4,7 +4,7 @@ var path =require ('path') ;
 var router =express.Router () ;
 var ForgeSDK = require('forge-apis');
 
-var CLIENT_ID = '' , CLIENT_SECRET = '';
+var CLIENT_ID = 'xTypOF4teSh2iOMbjXIGQdaI8zrE2O7H' , CLIENT_SECRET = 'GfM7jRnB7jKlFJPk';
 
 //LMV workflow
 router.get ('/gettoken', function (req, res) {
