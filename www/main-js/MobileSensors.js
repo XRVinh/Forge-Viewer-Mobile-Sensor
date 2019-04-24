@@ -15,7 +15,7 @@
 // UNINTERRUPTED OR ERROR FREE.
 ////////////////////////////////////////////////////////////////////////////////-->
 
-var socket = io('http://myforgetest.herokuapp.com');;
+var socket = io('https://forgeviewmobilesensor.herokuapp.com');
 var lastr = 0;
 var lastg = 0;
 var lastb = 0;
