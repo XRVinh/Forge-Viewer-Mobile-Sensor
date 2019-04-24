@@ -1,6 +1,6 @@
 
 var favicon = require('serve-favicon');
-var ForgeRoute = require('./routes/ForgeRoute');
+var ForgeRoute = require('./routes/ForgeRoute.js');
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
