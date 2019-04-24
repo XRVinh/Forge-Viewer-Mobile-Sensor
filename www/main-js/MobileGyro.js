@@ -1,4 +1,4 @@
-var socket = io('http://myforgetest.herokuapp.com');
+var socket = io('https://forgeviewmobilesensor.herokuapp.com');
 //var socket = io('<Replace with your own website>');
 
 
